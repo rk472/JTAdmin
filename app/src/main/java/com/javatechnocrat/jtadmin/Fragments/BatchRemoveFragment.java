@@ -47,7 +47,7 @@ public class BatchRemoveFragment extends Fragment {
                 data=new ArrayList<>();
                 for(DataSnapshot d : dataSnapshot.getChildren()){
                     key.add(d.getKey());
-                    String dat=d.child("date").getValue().toString()+d.child("name").getValue().toString()+"\n"+d.child("timing").getValue().toString();
+                    String dat=d.child("name").getValue().toString()+" "+d.child("date").getValue().toString()+" "+d.child("timing").getValue().toString();
                     data.add(dat);
                 }
                 ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,data);

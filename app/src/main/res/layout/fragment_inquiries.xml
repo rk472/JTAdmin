@@ -6,10 +6,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.EnquiriesFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/load_container"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/colorAccent"
+            android:text="Loading All the Inquiries\nPlease Wait"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="load.json"
+            app:lottie_loop="true" />
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/enquiry_list"
+        android:visibility="gone"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
     </android.support.v7.widget.RecyclerView>

@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -25,20 +26,20 @@ public class EnquiriesFragment extends Fragment {
     private View root;
     private RecyclerView enquiryList;
     private DatabaseReference enquiryRef;
+    private LinearLayout cont;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         root=inflater.inflate(R.layout.fragment_inquiries, container, false);
         enquiryList=root.findViewById(R.id.enquiry_list);
+        cont = root.findViewById(R.id.load_container);
         AppCompatActivity main=(AppCompatActivity)getActivity();
         main.getSupportActionBar().setTitle("Enquires");
         final ProgressDialog p=new ProgressDialog(getActivity());
-        p.setTitle("Please Wait");
-        p.setMessage("Loading Enquiries");
-        p.setCanceledOnTouchOutside(false);
-        p.setCancelable(false);
-        p.show();
+        cont.setVisibility(View.VISIBLE);
+        enquiryList.setVisibility(View.INVISIBLE);
         enquiryList.setHasFixedSize(true);
         enquiryRef= FirebaseDatabase.getInstance().getReference().child("enquiry");
         FirebaseRecyclerAdapter<Enquiry,EnquiryViewHolder> f=new FirebaseRecyclerAdapter<Enquiry, EnquiryViewHolder>(
@@ -49,7 +50,8 @@ public class EnquiriesFragment extends Fragment {
         ) {
             @Override
             protected void populateViewHolder(EnquiryViewHolder viewHolder, Enquiry model, final int position) {
-                p.dismiss();
+                cont.setVisibility(View.GONE);
+                enquiryList.setVisibility(View.VISIBLE);
                 viewHolder.setName(model.getName());
                 viewHolder.setCollege(model.getCollege());
                 viewHolder.setPhone(model.getContact_no());

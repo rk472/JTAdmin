@@ -15,11 +15,11 @@
             android:layout_height="60dp"
             android:orientation="vertical"
             android:background="@drawable/out_shape">
+
             <Spinner
                 android:id="@+id/batch_list"
                 android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:spinnerMode="dialog"></Spinner>
+                android:layout_height="60dp"></Spinner>
         </LinearLayout>
         <Button
             android:layout_width="300dp"

@@ -16,92 +16,141 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textAllCaps="true"
                 android:text="place"
                 android:id="@+id/enquiry_place" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textAllCaps="true"
                 android:text="name"
                 android:id="@+id/enquiry_name" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textAllCaps="true"
                 android:text="proff"
                 android:id="@+id/enquiry_prof" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="father"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textAllCaps="true"
                 android:id="@+id/enquiry_father" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="father proff"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textAllCaps="true"
                 android:id="@+id/enquiry_father_prof" />
             <TextView
                 android:layout_width="match_parent"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:textAllCaps="true"
                 android:layout_height="wrap_content"
                 android:text="mother"
                 android:id="@+id/enquiry_mother" />
                     <TextView
                         android:layout_width="match_parent"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:layout_height="wrap_content"
                         android:text="mother proff"
                         android:id="@+id/enquiry_mother_prof" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:text="college"
                         android:id="@+id/enquiry_college" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="sem"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:id="@+id/enquiry_sem" />
                     <TextView
                         android:layout_width="match_parent"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:layout_height="wrap_content"
                         android:text="trade"
                         android:id="@+id/enquiry_trade" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:text="email"
                         android:id="@+id/enquiry_email" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="contact no"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:id="@+id/enquiry_phone" />
                     <TextView
                         android:layout_width="match_parent"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:layout_height="wrap_content"
                         android:text="alt no"
                         android:id="@+id/enquiry_alt_no" />
                     <TextView
                         android:layout_width="match_parent"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:layout_height="wrap_content"
                         android:text="intrested in : "
                         android:id="@+id/enquiry_static" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:text="subject name"
                         android:id="@+id/enquiry_subjects" />
                     <TextView
                         android:layout_width="match_parent"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:layout_height="wrap_content"
                         android:text="friend ref"
                         android:id="@+id/enquiry_friend_ref"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
                         android:id="@+id/enquiry_ref_marketing"
                         android:text="marketing ref"
                         />
-
         </LinearLayout>
-
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
