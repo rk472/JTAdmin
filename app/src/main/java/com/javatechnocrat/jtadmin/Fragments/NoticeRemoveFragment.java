@@ -3,6 +3,7 @@ package com.javatechnocrat.jtadmin.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,8 @@ public class NoticeRemoveFragment extends Fragment {
         root=inflater.inflate(R.layout.fragment_notice_remove, container, false);
         s=root.findViewById(R.id.notice_list);
         deleteButton=root.findViewById(R.id.notice_delete_button);
+        AppCompatActivity main=(AppCompatActivity)getActivity();
+        main.getSupportActionBar().setTitle("Remove Notice");
         descText=root.findViewById(R.id.notice_description);
         noticeRef= FirebaseDatabase.getInstance().getReference().child("notice");
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

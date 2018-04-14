@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -38,6 +39,8 @@ public class GalleryFragment extends Fragment {
         // Inflate the layout for this fragment
         root=inflater.inflate(R.layout.fragment_gallery, container, false);
         galleryList=root.findViewById(R.id.gallery_list);
+        AppCompatActivity main=(AppCompatActivity)getActivity();
+        main.getSupportActionBar().setTitle("Gallery");
         galleryRef= FirebaseDatabase.getInstance().getReference().child("gallery");
         add=root.findViewById(R.id.add_image);
         add.setOnClickListener(new View.OnClickListener() {

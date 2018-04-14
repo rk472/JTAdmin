@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="name"
         android:id="@+id/enquiry_name_row"
         android:background="@color/colorAccent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="College"
+        android:id="@+id/enquiry_college_row"
+        android:background="@color/colorAccent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:id="@+id/enquiry_phone_row"
+        android:background="@color/colorAccent"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

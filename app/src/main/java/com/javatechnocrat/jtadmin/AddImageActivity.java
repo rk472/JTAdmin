@@ -35,6 +35,7 @@ public class AddImageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_image);
+        getSupportActionBar().setTitle("Upload Image");
         upload=findViewById(R.id.upload);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override

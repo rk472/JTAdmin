@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,8 @@ public class BatchAddFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         root=inflater.inflate(R.layout.fragment_batch_add, container, false);
+        AppCompatActivity main=(AppCompatActivity)getActivity();
+        main.getSupportActionBar().setTitle("Add Batch");
         dateText=root.findViewById(R.id.batch_date);
         nameText=root.findViewById(R.id.batch_name);
         timingText=root.findViewById(R.id.batch_timing);
