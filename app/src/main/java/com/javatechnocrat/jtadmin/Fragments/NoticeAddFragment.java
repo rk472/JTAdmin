@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,8 @@ public class NoticeAddFragment extends Fragment {
 
         root=inflater.inflate(R.layout.fragment_notice_add, container, false);
         noticeRef= FirebaseDatabase.getInstance().getReference().child("notice");
+        AppCompatActivity main=(AppCompatActivity)getActivity();
+        main.getSupportActionBar().setTitle("Add Notice");
         titleText=root.findViewById(R.id.notice_title);
         bodyText=root.findViewById(R.id.notice_body);
         addNotice=root.findViewById(R.id.notice_add_button);

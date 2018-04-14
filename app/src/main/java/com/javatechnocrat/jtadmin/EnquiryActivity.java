@@ -17,6 +17,7 @@ public class EnquiryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enquiry);
+        getSupportActionBar().setTitle("Full Details");
         place=findViewById(R.id.enquiry_place);
         name=findViewById(R.id.enquiry_name);
         proff=findViewById(R.id.enquiry_prof);

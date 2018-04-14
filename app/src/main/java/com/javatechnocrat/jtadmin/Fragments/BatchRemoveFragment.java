@@ -3,6 +3,7 @@ package com.javatechnocrat.jtadmin.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,8 @@ public class BatchRemoveFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         root=inflater.inflate(R.layout.fragment_batch_remove, container, false);
+        AppCompatActivity main=(AppCompatActivity)getActivity();
+        main.getSupportActionBar().setTitle("Remove Batch");
         s=root.findViewById(R.id.batch_list);
         deleteButton=root.findViewById(R.id.batch_delete_button);
         batchRef= FirebaseDatabase.getInstance().getReference().child("upcoming_batches");

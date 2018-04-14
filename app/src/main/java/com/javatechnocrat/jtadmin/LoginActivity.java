@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().setTitle("Java Technocrat Admin");
         passwordText=findViewById(R.id.login_password);
         login=findViewById(R.id.login_button);
         mAuth=FirebaseAuth.getInstance();
