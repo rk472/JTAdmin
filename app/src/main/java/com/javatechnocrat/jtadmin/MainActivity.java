@@ -89,7 +89,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_enquiries) {
-            Toast.makeText(this, "Go to Enquiries", Toast.LENGTH_SHORT).show();
+            if(getSupportFragmentManager().findFragmentById(R.id.main_container).getTag().equals("other"))
+            {
+                Fragment f=new EnquiriesFragment();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.main_container, f,"home");
+                fragmentTransaction.commit();
+            }
             return true;
         }
         return super.onOptionsItemSelected(item);
