@@ -53,6 +53,7 @@ public class EnquiryActivity extends AppCompatActivity {
                 alt_no.setText("Alternative NO : "+d.child("alt_no").getValue().toString());
                 ref_friend.setText("Friend Rerference : "+d.child("ref_friend").getValue().toString());
                 ref_marketing.setText("Marketing Reference : "+d.child("ref_marketing").getValue().toString());
+                sub.setText(getSubList(d));
             }
 
             @Override
@@ -61,5 +62,26 @@ public class EnquiryActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private String getSubList(DataSnapshot d) {
+        String s="";
+        if(d.child("c").getValue(Boolean.class))s+="C , ";
+        if(d.child("c++").getValue(Boolean.class))s+="C ++ , ";
+        if(d.child("core java").getValue(Boolean.class))s+="Core Java , ";
+        if(d.child("adv java").getValue(Boolean.class))s+="Advance Java , ";
+        if(d.child("oracle").getValue(Boolean.class))s+="Oracle , ";
+        if(d.child("iot").getValue(Boolean.class))s+="IOT , ";
+        if(d.child("php").getValue(Boolean.class))s+="PHP , ";
+        if(d.child("python").getValue(Boolean.class))s+="Python , ";
+        if(d.child("web technology").getValue(Boolean.class))s+="Web Technology , ";
+        if(d.child("spring & hibernate").getValue(Boolean.class))s+="Spring & Hibernate , ";
+        if(d.child("data structure").getValue(Boolean.class))s+="Data Structure , ";
+        if(d.child("android").getValue(Boolean.class))s+="Android , ";
+        if(d.child("dot_net").getValue(Boolean.class))s+=".NET , ";
+        if(d.child("big datahadoop").getValue(Boolean.class))s+="Big Data Hardoop , ";
+        if(d.child("spoken english").getValue(Boolean.class))s+="Spoken English , ";
+        s=s.substring(0,s.length()-2);
+        return s;
     }
 }

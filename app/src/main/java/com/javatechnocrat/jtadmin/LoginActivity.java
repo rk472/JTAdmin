@@ -41,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            loadingBar.dismiss();
                             Intent i=new Intent(LoginActivity.this,MainActivity.class);
                             startActivity(i);
                             finish();
