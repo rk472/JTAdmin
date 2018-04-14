@@ -5,12 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.NoticeAddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Add Notice"
-        android:textSize="20dp" />
-
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/notice_title"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/notice_body"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add notice"
+            android:id="@+id/notice_add_button"/>
+    </LinearLayout>
 </FrameLayout>

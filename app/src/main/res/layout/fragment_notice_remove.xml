@@ -5,12 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.NoticeRemoveFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Remove Notice"
-        android:textSize="20dp"/>
-
+        android:orientation="vertical"
+        android:gravity="center">
+        <Spinner
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/notice_list">
+        </Spinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desc"
+            android:id="@+id/notice_description"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Notice"
+            android:id="@+id/notice_delete_button"/>
+    </LinearLayout>
 </FrameLayout>

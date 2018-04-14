@@ -4,12 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.GalleryFragment">
-
-    <TextView
-        android:id="@+id/textView"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Gallery"
-        android:textSize="20dp" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gallery_list"></android.support.v7.widget.RecyclerView>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_add_black_24dp"
+            android:id="@+id/add_image"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
 </FrameLayout>
