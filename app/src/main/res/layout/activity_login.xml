@@ -7,16 +7,40 @@
     tools:context="com.javatechnocrat.jtadmin.LoginActivity"
     android:orientation="vertical"
     android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:text="Hello Admin\n\nWanna check out the datas"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="20dp"
+        android:text="Enter The Password and you are ready to go...."
+        android:textSize="25dp"/>
+
     <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/out_shape"
         android:inputType="textPassword"
+        android:padding="10dp"
+        android:hint="Enter Password"
         android:id="@+id/login_password"/>
     <Button
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="login"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:background="@drawable/fill_shape"
+        android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="192dp" />
 </LinearLayout>

@@ -11,17 +11,33 @@
         android:orientation="vertical"
         android:gravity="center">
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/notice_title"/>
+            android:id="@+id/notice_title"
+            android:layout_width="280dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:background="@drawable/out_shape"
+            android:hint="Notice Title"
+            />
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_width="280dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:background="@drawable/out_shape"
+            android:hint="Notice Body"
             android:id="@+id/notice_body"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="add notice"
+            android:layout_width="280dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:background="@drawable/fill_shape"
+            android:text="Add Notice"
             android:id="@+id/notice_add_button"/>
     </LinearLayout>
 </FrameLayout>

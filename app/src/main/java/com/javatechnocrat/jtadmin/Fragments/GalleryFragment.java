@@ -2,10 +2,13 @@ package com.javatechnocrat.jtadmin.Fragments;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,6 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.javatechnocrat.jtadmin.AddImageActivity;
+import com.javatechnocrat.jtadmin.MainActivity;
 import com.javatechnocrat.jtadmin.R;
 import com.squareup.picasso.Picasso;
 
@@ -55,15 +59,23 @@ public class GalleryFragment extends Fragment {
                 viewHolder.delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        FirebaseStorage.getInstance().getReferenceFromUrl(model.getUrl()).delete();
-                        getRef(position).removeValue();
+                        new AlertDialog.Builder(getActivity())
+                                .setTitle("Delete Picture")
+                                .setMessage("Do You really want to Delete ?")
+                                .setPositiveButton("Yes, Sure", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        FirebaseStorage.getInstance().getReferenceFromUrl(model.getUrl()).delete();
+                                        getRef(position).removeValue();
+                                    }
+                                }).setNegativeButton("No, Don't",null).show();
                     }
                 });
             }
         };
         galleryList.setAdapter(f);
         galleryList.setHasFixedSize(true);
-        galleryList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        galleryList.setLayoutManager(new GridLayoutManager(getActivity(),2));
         return root;
     }
     public static class GalleryViewHolder extends RecyclerView.ViewHolder{
@@ -80,25 +92,18 @@ public class GalleryFragment extends Fragment {
         }
 
     }
-
 }
 class Gallery{
     String url;
-
     public String getUrl() {
         return url;
     }
-
     public void setUrl(String url) {
         this.url = url;
     }
-
     public Gallery() {
-
     }
-
     public Gallery(String url) {
-
         this.url = url;
     }
 }
