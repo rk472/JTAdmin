@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         loadingBar =new ProgressDialog(this);
         loadingBar.setTitle("Please Wait");
-        loadingBar.setMessage("Please wait while we are logging you in..");
+        loadingBar.setMessage("Logging you in..");
         loadingBar.setCancelable(false);
         loadingBar.setCanceledOnTouchOutside(false);
         login.setOnClickListener(new View.OnClickListener() {

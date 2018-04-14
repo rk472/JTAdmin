@@ -5,22 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.javatechnocrat.jtadmin.LoginActivity"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:gravity="center">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_small"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:text="Hello Admin\n\nWanna check out the datas"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorWhite"
+        android:text="Hello Admin\nWanna check out the datas"
         android:textSize="25dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:layout_margin="20dp"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="15dp"
         android:text="Enter The Password and you are ready to go...."
         android:textSize="25dp"/>
 
@@ -30,7 +36,9 @@
         android:background="@drawable/out_shape"
         android:inputType="textPassword"
         android:padding="10dp"
+        android:textColor="@color/colorWhite"
         android:hint="Enter Password"
+        android:textColorHint="@color/colorWhite"
         android:id="@+id/login_password"/>
     <Button
         android:id="@+id/login_button"

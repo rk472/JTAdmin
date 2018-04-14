@@ -55,7 +55,7 @@ public class AddImageActivity extends AppCompatActivity {
             Bitmap thumb_bitmap = null;
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
-                loadingBar.setMessage("Wait while We are updating the image..");
+                loadingBar.setMessage("We are uploading the image..");
                 loadingBar.setTitle("Please Wait");
                 loadingBar.show();
                 Uri resultUri = result.getUri();
@@ -88,6 +88,7 @@ public class AddImageActivity extends AppCompatActivity {
                             public void onComplete(@android.support.annotation.NonNull Task<Void> task) {
                                 loadingBar.dismiss();
                                 Toast.makeText(AddImageActivity.this, "Successfully Uploaded...", Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         });
                     }
